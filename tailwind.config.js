@@ -48,9 +48,8 @@ export default {
         'serif': ['Playfair Display', 'Georgia', 'serif'],
         'sans': ['Poppins', 'Arial', 'sans-serif'],
       },
-      backgroundImage: {
-        'hero-pattern': "url('https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg')",
-        'about-pattern': "url('https://images.pexels.com/photos/2074130/pexels-photo-2074130.jpeg')",
+      aspectRatio: {
+        '4/3': '4 / 3',
       },
     },
   },
