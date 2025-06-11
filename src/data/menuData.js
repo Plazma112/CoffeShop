@@ -5,7 +5,7 @@ const menuData = {
       name: "Classic Espresso",
       description: "Rich and intense single shot of pure coffee essence",
       price: 3.50,
-      image: "https://images.pexels.com/photos/6802983/pexels-photo-6802983.jpeg"
+      image: "https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg"
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ const menuData = {
       name: "Caramel Macchiato",
       description: "Espresso with vanilla, milk, and caramel drizzle",
       price: 5.25,
-      image: "https://images.pexels.com/photos/4917222/pexels-photo-4917222.jpeg"
+      image: "https://images.pexels.com/photos/851555/pexels-photo-851555.jpeg"
     },
     {
       id: 4,
