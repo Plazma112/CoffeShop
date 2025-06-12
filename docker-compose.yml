@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: coffeeshop
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/coffeeshop
+      JWT_SECRET: your_super_secret_jwt
+      JWT_REFRESH_SECRET: your_refresh_secret_here
+      STRIPE_SECRET_KEY: your_stripe_secret_here
+      CLIENT_URL: http://localhost:5173
+      SMTP_HOST: smtp.example.com
+      SMTP_PORT: 587
+      SMTP_USER: your_email@example.com
+      SMTP_PASS: your_email_password
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/app
+
+volumes:
+  pgdata:
