@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Menu from './pages/Menu';
 import Contact from './pages/Contact';
+import Testimonials from './pages/Testimonials';
 import ScrollToTop from './components/ScrollToTop';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
@@ -12,7 +13,6 @@ import Cart from './pages/shop/Cart';
 import Checkout from './pages/shop/Checkout';
 import MyOrders from './pages/orders/MyOrders';
 import AdminDashboard from './pages/admin/AdminDashboard';
-
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="menu" element={<Menu />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="testimonials" element={<Testimonials />} />
 
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
